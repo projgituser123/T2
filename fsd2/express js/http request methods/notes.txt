@@ -1,0 +1,24 @@
+response methods : 
+
+res.write()
+res.send()
+res.end() // method from node js and not recommended to write in express.js codes
+res.json() // it will directly stop the sending data and no need to write LOC : res.send() after res.json()
+res.render()
+res.redirect() // use this to directly jump to another page
+res.type() or res.set() = both are same, but res.type(write directly mime type) and no need to write "content-type" indide it.
+res.send(req.params) // creates a json object where keys will given in app.get() method and values will be given by user via "strict routing"
+res.send(req.query) // for "flexible routing", and you have to give proper url format, also creates a json object...
+
+=======================================
+1. With req.params (Strict Routing)
+Yes, you must define the keys in your app.get() path. If the URL doesn't match the structure you defined, Express won't find the route.
+Your Code: app.get("/user/:name/:id", ...)
+The URL: Must look like /user/pedri/8
+The Rule: If you try to visit /user/pedri (missing the ID), you will get a 404 Not Found because Express is looking for that second "segment."
+2. With req.query (Flexible Routing)
+You use a simple, static route. You do not mention the keys in app.get(). Instead, you just provide the "base" path, and the URL handles the rest.
+Your Code: app.get("/search", ...)
+The URL: http://localhost:8000/search?name=pedri&id=8
+The Rule: The ?name=pedri&id=8 part is not part of the route matching. Express matches the /search part first, then looks at the "extra" stuff after the ? and puts it into req.query.
+=================================================
