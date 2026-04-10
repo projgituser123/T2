@@ -1,0 +1,23 @@
+express js is a framework of node.js means it will reduce the LOC from node.js because of pre-defined methods..
+- we will create the API request here in this chapter
+npm = node package module
+
+// to check the version of nvm
+npm -v
+
+// to check the version of express
+npm list express
+
+// path to install express/npm in clg : npm config set proxy http://192.168.10.251:808
+                                        npm install express --save
+
+http request methods : uri = uniform resource informer, it is a identifier
+SYNTAX : app.method(URI, request listener function) === app.get("/", function(req,res){ // code here });
+
+- get
+- post 
+- put = (it is a req method ) used for updation, remove all the data and "put" back the new data
+- delete
+- all
+
+// there will be no if-else statement in express.js because there will be app.method() for each and every page which is now working indepently, opposite from http module in node js
