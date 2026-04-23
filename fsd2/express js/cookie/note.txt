@@ -1,0 +1,15 @@
+cookies :::
+- actual use = to store the user's interested data in form of text... for eg : insta algorithm
+- it is always stored in browser so user can manipulate.
+
+// to create a cookie : res.cookie(name,user defined "value" always in string) // note: if you want to store more values under same cookie name then always give parameter of json object where its values are string or value = req.query.....
+
+// to read a cookie  : req.cookies
+
+//res.send(req.cookies) = returns a object of cookie and is sent to browser 
+
+// to delete : res.clearCookie(name)
+
+// to clear cookie after certain time interval : res.cookie(name, value, (json obj) {expires :new Date(Date.now() + int ms) })
+                                                                                OR
+                                                res.cookie(name, value, (json obj) {maxAge : int ms})
