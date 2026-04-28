@@ -1,0 +1,9 @@
+Sessions :::
+
+- They are mostly used in payment gateway where there is a window time period to make a payment within... another example is gmail = shutting down pc w/o logging out the acc.. and when you enter gmail page again they dont ask for the credential again.. this is called Sessions..
+
+- Syntax = app.use(es({
+    secret : value,
+    resave : false,
+    saveUninitialized : false
+}))
