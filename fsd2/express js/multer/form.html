@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="/data" enctype="multipart/form-data"> <!--compulsory method should be "post" nahi toh file send j nai thay.. and also enctype="multipart/form-data" should be written to make multer work -->
+        Upload file here (**in .jpg, .jpeg, .pdf, .png format only ) :  <input type="file" name="pedri_celebration" accept=".jpg, .jpeg, .pdf, .png"><br>
+        <input type="submit" value="Upload now!">
+    </form>
+</body>
+</html>
