@@ -7,7 +7,7 @@
 </head>
 <body>
     <form method="post" action="/data" enctype="multipart/form-data"> <!--compulsory method should be "post" nahi toh file send j nai thay.. and also enctype="multipart/form-data" should be written to make multer work -->
-        Upload file here (**in .jpg, .jpeg, .pdf, .png format only ) :  <input type="file" name="pedri_celebration" accept=".jpg, .jpeg, .pdf, .png"><br>
+        Upload file here (**in .jpg, .jpeg, .pdf, .png format only ) :  <input type="file" name="pedri_celebration" accept=".jpg, .jpeg, .pdf, .png" multiple><br>  <!--if you want to send multiple files then write "multiple" else write nothing-->
         <input type="submit" value="Upload now!">
     </form>
 </body>
